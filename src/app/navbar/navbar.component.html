@@ -1,4 +1,4 @@
-<div class="gap-20 flex justify-between w-4/5 m-auto border-b-2">
+<div class="gap-20 flex justify-between w-4/5 m-auto border-b-2 absolute top-0 left-32">
     <div class="flex gap-10">
         <h2 class="font-bold text-4xl my-5">sneakers</h2>
         <div class="flex items-center gap-4 text-gray-300">
@@ -30,9 +30,15 @@
                 <fa-icon [icon]='faCart' size="2x">
                 </fa-icon>
             </button>
-            <div class="absolute top-16 shadow-md  px-4">
-                <div>
-                    <img src='./assets/images/image-product-1.jpg' alt="">
+            <div *ngIf="showcart" class="absolute top-16 shadow-md  px-4">
+                <div class="flex">
+                    <img class="w-52" src='./assets/images/image-product-1.jpg' alt="">
+                    <div>
+                        Fall limited Edition sneakers
+                    </div>
+                    <div>
+                        {{shoppingcart}}
+                    </div>
                 </div>
             </div>
         </div>

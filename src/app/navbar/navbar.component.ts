@@ -9,7 +9,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 export class NavbarComponent implements OnChanges {
   @Input() receivedNumber: number | undefined
   faCart = faCartShopping
-  showcart : boolean =false
+  showcart : boolean = false
   shoppingcart = 0
 
   ngOnChanges(changes: SimpleChanges) {
