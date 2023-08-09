@@ -1,0 +1,41 @@
+<div class="gap-20 flex justify-between w-4/5 m-auto border-b-2">
+    <div class="flex gap-10">
+        <h2 class="font-bold text-4xl my-5">sneakers</h2>
+        <div class="flex items-center gap-4 text-gray-300">
+            <a class="hover:border-b-2 border-orange-500 py-4" href="">Collections</a>
+            <a class="hover:border-b-2 border-orange-500 py-4" href="">Men</a>
+            <a class="hover:border-b-2 border-orange-500 py-4" href="">Women</a>
+            <a class="hover:border-b-2 border-orange-500 py-4" href="">About</a>
+            <a class="hover:border-b-2 border-orange-500 py-4" href="">Contact</a>
+        </div>
+    </div>
+    <div class="flex items-center gap-5">
+        <div class=" relative top-0 left-0">
+            <div class="
+            bg-orange-500 
+            rounded-full 
+            font-bold 
+            text-xs
+            text-white 
+            text-center
+            w-5
+            relative
+            left-1/4
+            top-2
+            " 
+            *ngIf='shoppingcart>0'>
+                {{shoppingcart}}
+            </div>
+            <button a (click)="toogleCart()">
+                <fa-icon [icon]='faCart' size="2x">
+                </fa-icon>
+            </button>
+            <div class="absolute top-16 shadow-md px-4">
+                <div>
+                    <img src='./assets/images/image-product-1.jpg' alt="">
+                </div>
+            </div>
+        </div>
+        <img class="w-16 hover:border-2 rounded-2xl border-orange-500" src='assets/images/profileimg.png' alt="">
+    </div>
+</div>

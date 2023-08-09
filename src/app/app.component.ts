@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'sneakers';
+  title = 'sneakers'
+  public receivedNumber: number | undefined
+
+  onNumberSent(number: number) {
+    this.receivedNumber = number
+  }
 }
