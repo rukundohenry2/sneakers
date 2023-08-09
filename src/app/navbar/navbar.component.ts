@@ -13,10 +13,10 @@ export class NavbarComponent implements OnChanges {
   shoppingcart = 0
 
   ngOnChanges(changes: SimpleChanges) {
-    // if (changes['receivedNumber']) {
-    //   this.cartAdd(changes['receivedNumber'].currentValue)
-    //   console.log('Received Number changed:', changes['receivedNumber'].currentValue);
-    // }
+    if (changes['receivedNumber']) {
+      this.cartAdd(changes['receivedNumber'].currentValue)
+      console.log('Received Number changed:', changes['receivedNumber'].currentValue);
+    }
   }
 
   toogleCart(){
@@ -24,7 +24,7 @@ export class NavbarComponent implements OnChanges {
     this.showcart = !this.showcart
   }
   cartAdd(itemvalue:number){
-    this.shoppingcart = this.shoppingcart + itemvalue
+    this.shoppingcart = itemvalue
   }
   cartRemove(itemvalue:number){
 
